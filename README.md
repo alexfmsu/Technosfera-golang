@@ -24,6 +24,7 @@
 1. Реализовать простую игру (описание в папке с игрой)
 
 [task2/game](/task2/game-0/)<br/>
+
 Реализация: [t.me/open_door_bot](http://t.me/open_door_bot)
 ##
 ### Задание 3
