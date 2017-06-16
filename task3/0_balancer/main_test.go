@@ -8,13 +8,13 @@ import (
 )
 
 func TestRoundRobinBalancer(t *testing.T) {
-
 	balancer := new(RoundRobinBalancer)
 	balancer.Init(3)
 	balancer.GiveStat()
 
 	expected := []int{0, 0, 0}
 	result := balancer.GiveStat()
+
 	if !reflect.DeepEqual(result, expected) {
 		t.Error("expected", expected, "have", result)
 	}
@@ -23,24 +23,26 @@ func TestRoundRobinBalancer(t *testing.T) {
 
 	expected = []int{1, 0, 0}
 	result = balancer.GiveStat()
+
 	if !reflect.DeepEqual(result, expected) {
 		t.Error("expected", expected, "have", result)
 	}
+
 	fmt.Println(n, expected)
 
 	n = balancer.GiveNode()
 
 	expected = []int{1, 1, 0}
 	result = balancer.GiveStat()
+
 	if !reflect.DeepEqual(result, expected) {
 		t.Error("expected", expected, "have", result)
 	}
-	fmt.Println(n, expected)
 
+	fmt.Println(n, expected)
 }
 
 func TestRoundRobinBalancerMany(t *testing.T) {
-
 	tests := []struct {
 		servers  int
 		clients  int
@@ -56,6 +58,7 @@ func TestRoundRobinBalancerMany(t *testing.T) {
 		wg := new(sync.WaitGroup)
 		balancer := new(RoundRobinBalancer)
 		balancer.Init(test.servers)
+
 		for i := 0; i < test.clients; i++ {
 			wg.Add(1)
 			go func() {
@@ -65,13 +68,14 @@ func TestRoundRobinBalancerMany(t *testing.T) {
 				}
 			}()
 		}
+		
 		wg.Wait()
 
 		expected := test.expected
 		result := balancer.GiveStat()
+		
 		if !reflect.DeepEqual(result, expected) {
 			t.Error("expected", expected, "have", result)
 		}
 	}
-
 }
