@@ -1,12 +1,9 @@
-// < DONE
 package main
 
 type task struct {
 	name    string
 	is_done func() bool
 }
-
-// > DONE
 
 func (p *Player) get_tasks() string {
 	var ret string
@@ -39,7 +36,6 @@ func (p *Player) init_tasks() {
 				return ok
 			},
 		},
-
 		&task{
 			name: "идти в универ",
 			is_done: func() bool {

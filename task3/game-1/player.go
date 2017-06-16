@@ -1,4 +1,3 @@
-// < DONE
 package main
 
 import (
@@ -19,8 +18,6 @@ type Chan struct {
 	msg chan string
 	sync.Mutex
 }
-
-// > DONE
 
 var PLAYERS []*Player
 
@@ -56,7 +53,6 @@ func NewPlayer(player_name string) *Player {
 	return &p
 }
 
-// < DONE
 func (player *Player) get_item(item *Item) (*Item, bool) {
 	for i := range player.items {
 		if player.items[i].name == item.name {
@@ -133,9 +129,6 @@ func (p *Player) GetOutput() chan string {
 	return msg
 }
 
-// > DONE
-
-// < NOT DONE tasks
 func (p *Player) wear(item_name string) {
 	var ret string
 
@@ -159,14 +152,9 @@ func (p *Player) wear(item_name string) {
 	p.out.msg <- ret
 }
 
-// > NOT DONE tasks
-
-// < DONE
 func (player *Player) add_item(item *Item) {
 	player.items = append(player.items, item)
 }
-
-// > DONE
 
 func (p *Player) handleCommand(s string) {
 	params := strings.Split(s, " ")
@@ -221,5 +209,4 @@ func (p *Player) handleCommand(s string) {
 	}
 
 	wg.Done()
-
 }
