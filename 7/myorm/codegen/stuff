@@ -1,0 +1,45 @@
+`
+    row, err := stmt.Exec(` + `)
+    
+    if err != nil{
+        return err
+    }
+
+    last_id, err := row.LastInsertId()
+    
+    if err != nil{
+        return err
+    }
+
+    u.ID = uint(last_id)
+
+
+        s := reflect.ValueOf(u).Elem()
+
+    typeOfT := s.Type()
+
+    fmt.Println("123\n\n\n\n")
+
+    for i := 0; i < s.NumField(); i++ {
+        f := s.Field(i)
+
+        name := typeOfT.Field(i).Name
+
+        fmt.Println(name, f)
+    }
+
+
+
+
+
+
+{{range $k, $v := .Columns}}{{if eq $v.Is_Null true}}if null_string["{{$v.Name}}"].Valid{
+            // {{$tmp}}.{{$v.Name}} = null_string["{{$v.Name}}"].Value
+        }else{
+        }{{end}}
+    {{end}}
+    
+
+
+    err = db.QueryRow("SELECT(` + cr_fields + ` FROM {{$tb}} WHERE {{$pr}}=?", ` + cr_scan + `).Scan(` + cr_vals + `)
+    

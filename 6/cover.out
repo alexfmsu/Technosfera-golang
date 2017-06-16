@@ -1,0 +1,21 @@
+mode: set
+99_homework/main.go:38.129,41.16 2 1
+99_homework/main.go:44.2,44.16 1 1
+99_homework/main.go:47.2,47.16 1 1
+99_homework/main.go:53.2,65.16 9 1
+99_homework/main.go:68.2,69.16 2 1
+99_homework/main.go:75.2,82.16 6 1
+99_homework/main.go:87.2,89.23 2 1
+99_homework/main.go:95.2,95.21 1 1
+99_homework/main.go:41.16,43.3 1 1
+99_homework/main.go:44.16,46.3 1 1
+99_homework/main.go:47.16,50.3 1 1
+99_homework/main.go:65.16,67.3 1 0
+99_homework/main.go:69.16,70.54 1 1
+99_homework/main.go:73.3,73.18 1 1
+99_homework/main.go:70.54,72.4 1 1
+99_homework/main.go:82.16,84.3 1 1
+99_homework/main.go:89.23,91.3 1 1
+99_homework/main.go:98.28,99.11 1 1
+99_homework/main.go:99.11,101.3 1 1
+99_homework/main.go:101.3,103.3 1 1
