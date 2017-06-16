@@ -8,6 +8,7 @@ import (
 
 func TestMain(t *testing.T) {
 	res := []interface{}{}
+
 	case1 := []job{
 		job(func(in, out chan interface{}) {
 			for i := 0; i < 10; i++ {
@@ -34,6 +35,7 @@ func TestMain(t *testing.T) {
 	expected := []interface{}{0, 30, 60, 90}
 
 	Pipe(case1...)
+
 	for r := range res {
 		if !reflect.DeepEqual(res[r], expected[r]) {
 			t.Errorf("Failed output")
@@ -65,11 +67,11 @@ func TestMain(t *testing.T) {
 	}
 
 	Pipe(case2...)
+
 	expected2 := "Hello World"
 
 	if !reflect.DeepEqual(res2, expected2) {
 		t.Errorf("Failed output, expected %s got %s", expected2, res2)
 		t.FailNow()
 	}
-
 }
