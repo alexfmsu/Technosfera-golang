@@ -50,7 +50,7 @@ GiveNode - функция вызывается, когда пришел запр
 Pipe(funcs ...job) 
 
 Где 
-type job func(in, out chan interface{})<br/><br/>
+type job func(in, out chan interface{})
 
 [task3/pipeline](/task3/1_pipeline/)<br/><br/>
 
