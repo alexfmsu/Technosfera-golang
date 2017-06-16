@@ -40,7 +40,7 @@ Init - инициализирует собственно балансер - пр
 GiveStat - даёт статистику, сколько запросов пришло на каждый из серверов.
 GiveNode - эта функция фвзывается, когда пришел запрос. мы получаем номер сервера, на который идти.
 
-[task3/balancer](/task3/balancer/)<br/><br/>
+[task3/balancer](/task3/0_balancer/)<br/><br/>
 ##### Pipeline
 
 Требуется реализовать функцию последовательно выполняющую все переданные операции 
@@ -50,7 +50,7 @@ Pipe(funcs ...job)
 Где 
 type job func(in, out chan interface{})<br/><br/>
 
-[task3/pipeline](/task3/pipeline/)<br/><br/>
+[task3/pipeline](/task3/1_pipeline/)<br/><br/>
 
 ##### Творческое задание
 
@@ -74,6 +74,9 @@ type job func(in, out chan interface{})<br/><br/>
 У игрока появляется метод HandleInput, который принимает от него входящее сообщение. 
 А так же метод HandleOutput, в который мы пишем то что игро должен видеть у себя на экране.
 И метод GetOutput, который возвращает канал, принимающий сообщения
+
+[task3/game](/task3/game-1/)<br/><br/>
+
 
 
 
