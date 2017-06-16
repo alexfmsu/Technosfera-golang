@@ -1,8 +1,10 @@
 package main
+
 import (
 	"reflect"
 	"testing"
 )
+
 func TestReturnInt(t *testing.T) {
 	if ReturnInt() != 1 {
 		t.Error("expected 1")
@@ -40,38 +42,31 @@ func TestMergeSlices(t *testing.T) {
 	}
 }
 
-type pair struct{
-    template string
-    expr string
+type pair struct {
+	template string
+	expr     string
 }
 
 func TestGetMapValuesSortedByKey(t *testing.T) {
 	var cases = []struct {
-        expected []string
-        input pair
-    }{
-        {
-            expected: []string{
-                "4",
-            },
-            input: pair{
-                template: "$",
-                expr: "asd",
-            },
-        },
-    }
+		expected []string
+		input    pair
+	}{
+		{
+			expected: []string{
+				"4",
+			},
+			input: pair{
+				template: "$",
+				expr:     "asd",
+			},
+		},
+	}
 
-    for _, item := range cases {
-        Ctemplate := C.CString(item.input.template)
-        Cexpr := C.CString(item.input.expr)
+	for _, item := range cases {
+		Ctemplate := C.CString(item.input.template)
+		Cexpr := C.CString(item.input.expr)
 
-        fmt.Println(C.slre_match(Ctemplate, Cexpr, 4, nil, 0, 0))
-        // fmt.Println(item.input.template)
-    }
-	// for _, item := range cases {
-	// 	result := GetMapValuesSortedByKey(item.input)
-	// 	if !reflect.DeepEqual(result, item.expected) {
-	// 		t.Error("expected", item.expected, "have", result)
-	// 	}
-	// }
+		fmt.Println(C.slre_match(Ctemplate, Cexpr, 4, nil, 0, 0))
+	}
 }
