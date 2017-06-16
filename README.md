@@ -77,7 +77,7 @@ type job func(in, out chan interface{})<br/><br/>
 И метод GetOutput, который возвращает канал, принимающий сообщения
 
 [task3/game](/task3/game-1/)<br/>
-Telegram: @open_door_bot
+[Telegram](t.me/open_door_bot)
 ##
 ### Задание 4
 
