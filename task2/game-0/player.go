@@ -1,4 +1,3 @@
-// < DONE
 package main
 
 type Player struct {
@@ -6,9 +5,6 @@ type Player struct {
 	items []*Item
 }
 
-// > DONE
-
-// < DONE
 func (player *Player) get_item(item *Item) (*Item, bool) {
 	for i := range player.items {
 		if player.items[i].name == item.name {
@@ -19,9 +15,6 @@ func (player *Player) get_item(item *Item) (*Item, bool) {
 	return nil, false
 }
 
-// > DONE
-
-// < NOT DONE tasks
 func (player *Player) wear(item_name string) string {
 	var ret string
 
@@ -45,11 +38,6 @@ func (player *Player) wear(item_name string) string {
 	return ret
 }
 
-// > NOT DONE tasks
-
-// < DONE
 func (player *Player) add_item(item *Item) {
 	player.items = append(player.items, item)
 }
-
-// > DONE

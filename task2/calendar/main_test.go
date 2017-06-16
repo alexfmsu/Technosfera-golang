@@ -25,16 +25,13 @@ func TestCurrentQuarter(t *testing.T) {
 		{month: "12", quarter: 4},
 	}
 
-	//TODO Реализовать Календарь
-
 	for _, test := range cases {
 		parsed, _ := time.Parse("2006-01-02", fmt.Sprintf("2015-%s-15", test.month))
 		calendar := NewCalendar(parsed)
 		actual := calendar.CurrentQuarter()
+
 		if actual != test.quarter {
-			t.Error("Month:", test.month,
-				"Expected Quarter:", test.quarter,
-				"Actual Quarter:", actual)
+			t.Error("Month:", test.month, "Expected Quarter:", test.quarter, "Actual Quarter:", actual)
 		}
 	}
 }

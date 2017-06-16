@@ -1,12 +1,9 @@
-// < DONE
 package main
 
 type task struct {
 	name    string
 	is_done func() bool
 }
-
-// > DONE
 
 func get_tasks() string {
 	var ret string

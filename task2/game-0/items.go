@@ -1,9 +1,5 @@
-// < DONE
 package main
 
-// > DONE
-
-// < NOT DONE
 type Item struct {
 	name      string
 	items     []*Item

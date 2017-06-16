@@ -1,18 +1,11 @@
-// < DONE
 package main
-
-// > DONE
 
 import (
 	"strings"
 )
 
-// Player
 var player Player
 
-// Player
-
-// Rooms
 var KITCHEN Room
 var FLAT Room
 var HALL Room
@@ -23,21 +16,13 @@ var ROOMS []*Room
 
 var INIT_ROOM *Room
 
-// Rooms
-
-// Tasks
 var TASKS []*task
 
-// Tasks
-
-// Items
 var BACKPACK = Item{
 	name: "рюкзак",
 }
 
 var ITEMS map[string]*Item
-
-// > NOT DONE
 
 var DOOR = Item{
 	name:      "дверь",
@@ -56,8 +41,6 @@ var WARDROBE = Item{
 var KEY = Item{
 	apply_to: []*Item{&DOOR},
 }
-
-// Items
 
 func look_around() string {
 	var ret string
@@ -212,7 +195,4 @@ func initGame() {
 	player.items = []*Item{}
 }
 
-// < DONE
 func main() {}
-
-// > DONE

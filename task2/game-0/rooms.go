@@ -1,9 +1,5 @@
-// < DONE
 package main
 
-// > DONE
-
-// < NOT DONE
 type Room struct {
 	name         string
 	neighbour    []*Room
@@ -13,9 +9,6 @@ type Room struct {
 	in_condition func() (bool, string)
 }
 
-// > NOT DONE
-
-// < NOT DONE second item
 func (room Room) has_item(item_name string) (*Item, bool) {
 	for i := range room.items {
 		if room.items[i].name == item_name {
@@ -32,9 +25,6 @@ func (room Room) has_item(item_name string) (*Item, bool) {
 	return nil, false
 }
 
-// > NOT DONE second item
-
-// < NOT DONE second item, cut
 func (room *Room) remove_item(item *Item) {
 	for i := range room.items {
 		if room.items[i] == item {
@@ -53,9 +43,6 @@ func (room *Room) remove_item(item *Item) {
 	}
 }
 
-// > NOT DONE second item, cut
-
-// < DONE
 func (player *Player) get_neighbour(neighbour_name string) (*Room, bool) {
 	for i := range player.room.neighbour {
 		if player.room.neighbour[i].name == neighbour_name {
@@ -66,13 +53,10 @@ func (player *Player) get_neighbour(neighbour_name string) (*Room, bool) {
 	return nil, false
 }
 
-// > DONE
-
 func (room *Room) has_neighbour() bool {
 	return len(room.neighbour) > 0
 }
 
-// < NOT DONE
 func init_rooms() {
 	ROOMS = []*Room{&KITCHEN, &FLAT, &HALL, &STREET}
 
@@ -151,5 +135,3 @@ func init_rooms() {
 		name: "домой",
 	}
 }
-
-// > NOT DONE
