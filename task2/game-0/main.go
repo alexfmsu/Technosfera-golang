@@ -9,6 +9,7 @@ import (
 
 // Player
 var player Player
+
 // Player
 
 // Rooms
@@ -21,10 +22,12 @@ var HOME Room
 var ROOMS []*Room
 
 var INIT_ROOM *Room
+
 // Rooms
 
 // Tasks
 var TASKS []*task
+
 // Tasks
 
 // Items
@@ -53,6 +56,7 @@ var WARDROBE = Item{
 var KEY = Item{
 	apply_to: []*Item{&DOOR},
 }
+
 // Items
 
 func look_around() string {
@@ -91,7 +95,7 @@ func move(room_name string) string {
 	var ret string
 
 	if room, ok := player.get_neighbour(room_name); ok {
-		if ok, fault_msg := room.in_condition(); !ok{
+		if ok, fault_msg := room.in_condition(); !ok {
 			return fault_msg
 		}
 
@@ -140,7 +144,7 @@ func apply(subj Item, obj Item) string {
 			if objX.apply_to[i].name == obj.name {
 				objY := ITEMS[obj.name]
 
-				if objY.status == "закрыт" && objY.has_position("открыт"){
+				if objY.status == "закрыт" && objY.has_position("открыт") {
 					ITEMS[obj.name].status = "открыт"
 
 					ret = ITEMS[obj.name].name + " " + ITEMS[obj.name].status + ITEMS[obj.name].postfix
@@ -199,9 +203,9 @@ func initGame() {
 	init_tasks()
 	init_items()
 	init_rooms()
-	
+
 	DOOR.status = "закрыт"
-	
+
 	INIT_ROOM = &KITCHEN
 	player.room = INIT_ROOM
 

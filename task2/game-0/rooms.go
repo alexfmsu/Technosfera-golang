@@ -73,7 +73,7 @@ func (room *Room) has_neighbour() bool {
 }
 
 // < NOT DONE
-func init_rooms	() {
+func init_rooms() {
 	ROOMS = []*Room{&KITCHEN, &FLAT, &HALL, &STREET}
 
 	KITCHEN = Room{

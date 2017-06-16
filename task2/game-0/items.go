@@ -22,9 +22,9 @@ func item_exists(name string) bool {
 	return false
 }
 
-func (item *Item) has_position(position_name string) bool{
-	for i := range(item.positions){
-		if item.positions[i] == position_name{
+func (item *Item) has_position(position_name string) bool {
+	for i := range item.positions {
+		if item.positions[i] == position_name {
 			return true
 		}
 	}
