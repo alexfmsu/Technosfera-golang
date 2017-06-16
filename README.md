@@ -77,7 +77,8 @@ type job func(in, out chan interface{})<br/><br/>
 А так же метод HandleOutput, в который мы пишем то что игро должен видеть у себя на экране.
 И метод GetOutput, который возвращает канал, принимающий сообщения
 
-[task3/game](/task3/game-1/)<br/>
+[task3/game](/task3/game-1/)
+
 Реализация: [t.me/open_door_bot](http://t.me/open_door_bot)
 ##
 ### Задание 4
