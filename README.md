@@ -24,7 +24,7 @@
 1. Реализовать простую игру (описание в папке с игрой)
 
 [task2/game](/task2/game-0/)<br/>
-Telegram: @open_door_bot
+Реализация: [t.me/open_door_bot](http://t.me/open_door_bot)
 ##
 ### Задание 3
 
@@ -104,7 +104,7 @@ type job func(in, out chan interface{})<br/><br/>
 ##### Game
 
 [task4/game](/task4/game-2/)<br/>
-Telegram: @open_door_bot
+Реализация: [t.me/open_door_bot](http://t.me/open_door_bot)
 ##
 ### Задание 6
 Задание №6 - написание тестов
